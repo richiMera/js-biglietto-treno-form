@@ -1,14 +1,7 @@
-// var nome = document.getElementById('nome_cognome').value;
-// console.log(nome);
 
-// var km = document.getElementById('kilometri');
-// console.log(nome);
-//
-// var eta = document.getElementById('kilometri');
-// console.log(eta);
 var pulsanteGenera = document.getElementById("genera");
 pulsanteGenera.addEventListener("click",
-function() {
+ function() {
   var nome = document.getElementById('nome_cognome').value;
   console.log(nome);
 
@@ -19,14 +12,12 @@ function() {
  console.log(etaUtente);
 
   var basePrice = 0.21;
-  // console.log(basePrice);
+
   var ticketPrice = kmUtente * basePrice;
-  // console.log(ticketPrice);
-  // va applicato uno sconto del 20% per i minorenni;
+
 
   var minorsDiscount = (ticketPrice * 20) / 100;
-  // console.log(minorsDiscount);
-  // va applicato uno sconto del 40% per gli over 65.
+
   var overDiscount = (ticketPrice * 40) /100;
 
   var minorFinalPrice = ticketPrice - minorsDiscount;
@@ -37,19 +28,22 @@ function() {
   var accuracyOver = overFinalPrice.toFixed(2);
   var accuracyNormal = ticketPrice.toFixed(2);
 
+  var finalPrice = accuracyNormal;
   var message = "";
   if (etaUtente == "minorenne") {
       message = "Sconto minorenne"
-      accuracyMinor;
+      finalPrice = accuracyMinor;
+
       console.log(accuracyMinor);
     } else if (etaUtente == "over65") {
-        message = "Sconto Silver"
-        accuracyOver;
+        message = "Sconto Silver";
+        finalPrice = accuracyOver;
+
         console.log(accuracyOver);
     } else {
-      message = "Biglietto Standard"
-        accuracyNormal;
-        console.log(accuracyNormal);
+      message = "Biglietto Standard";
+      finalPrice = accuracyNormal;
+      console.log(accuracyNormal);
     }
 
     var ticket = document.getElementById("biglietto");
@@ -68,7 +62,24 @@ function() {
     codiceCp.innerHTML = Math.floor(Math.random() * 10000) + 9000;
 
     var costoBiglietto = document.getElementById("costo");
-    costoBiglietto.innerHTML = etaUtente;
+    costoBiglietto.innerHTML = finalPrice;
 
   }
+);
+
+var pulsanteAnnulla = document.getElementById("annulla");
+pulsanteAnnulla.addEventListener("click",
+ function() {
+   document.getElementById("biglietto").style.opacity = 0;
+
+   document.getElementById("nome_cognome").value = "";
+   document.getElementById("kilometri").value = "";
+   document.getElementById("eta").value = "";
+
+   document.getElementById("nomePasseggero").value = "";
+   document.getElementById("offerta").value = "";
+   document.getElementById("carrozza").value = "";
+   document.getElementById("codice").value = "";
+   document.getElementById("costo").value = "";
+ }
 )
