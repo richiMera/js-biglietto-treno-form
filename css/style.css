@@ -105,6 +105,9 @@ form {
 .buyer_ticket {
   height: 100%;
 }
+.display_none {
+  opacity: 0;
+}
 /* .price_shower
 .price_shower h2,
 .price_shower i {

@@ -23,8 +23,7 @@ function() {
   var ticketPrice = kmUtente * basePrice;
   // console.log(ticketPrice);
   // va applicato uno sconto del 20% per i minorenni;
-  // var minorAge = 18;
-  // var overAge = 65;
+
   var minorsDiscount = (ticketPrice * 20) / 100;
   // console.log(minorsDiscount);
   // va applicato uno sconto del 40% per gli over 65.
@@ -41,12 +40,16 @@ function() {
   if (etaUtente == "minorenne") {
       accuracyMinor;
       console.log(accuracyMinor);
-      } else if (etaUtente == "over65") {
+    } else if (etaUtente == "over65") {
         accuracyOver;
         console.log(accuracyOver);
-      } else {
+    } else {
         accuracyNormal;
         console.log(accuracyNormal);
-  }
+    }
+
+    var ticket = document.getElementById("biglietto");
+    ticket.style.opacity = 1;
+
   }
 )
