@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* header */
 header {
   display: flex;
   justify-content: space-between;
@@ -59,13 +60,37 @@ a:hover .pink_line {
 .btn:hover {
   transform: scale(1.1);
 }
+/* <!-- heder da migliorare --> */
 
+
+/* main */
 main {
   width: 100%;
   height: calc(100vh - 90px);
   background-color: black;
 }
 
+#click_to_show {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  line-height: 30px;
+  border: 3px solid black;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.hidden {
+  opacity: 0;
+  transition: 2s;
+}
+.visible {
+  opacity: 1;
+  transition: 2s;
+}
 .hero_container {
   width: 100%;
   height: 100%;
@@ -170,80 +195,3 @@ form {
 .btn_shower span {
   font-size: 20px;
 } */
-
-.top_btn {
-  position: absolute;
-  top: -10%;
-  left: 10%;
-  width: 40px;
-  height: 15px;
-  background-color: white;
-}
-.bottom_btn {
-  position: absolute;
-  bottom: -10%;
-  right: 10%;
-  width: 40px;
-  height: 15px;
-  background-color: white;
-}
-
-.btn_shower:hover .top_btn {
-  animation: spin-top 3s linear;
-}
-@keyframes spin-top {
-  0% {
-    left: 10%;
-    top: -10%;
-  }
-  30% {
-    left: calc(100% - 30px);
-    top: -10%;
-  }
-  45% {
-    left: calc(100% - 30px);
-    top: 100%;
-  }
-  75% {
-    left: 0;
-    top: 100%;
-  }
-  90% {
-    left: -15px;
-    top: -10%;
-  }
-  100% {
-    left: 10%;
-    top: -10%;
-  }
-}
-
-.btn_shower:hover .bottom_btn {
-  animation: bottom-spin 3s linear;
-}
-@keyframes bottom-spin {
-  0% {
-    right: 10%;
-    bottom: -10px;
-  }
-  30% {
-    right: calc(100% - 30px);
-    bottom: -10%;
-  }
-  45% {
-    right: calc(100% - 30px);
-    bottom: 100%;
-  }
-  75% {
-    right: 0%;
-    bottom: 100%;
-  }
-  90% {
-    right: -15%;
-    bottom: -10%;
-  }
-  100% {
-    right: 10%;
-    bottom: -10px;
-  }
-}

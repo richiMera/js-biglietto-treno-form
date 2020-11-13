@@ -62,7 +62,7 @@ pulsanteGenera.addEventListener("click",
     codiceCp.innerHTML = Math.floor(Math.random() * 10000) + 9000;
 
     var costoBiglietto = document.getElementById("costo");
-    costoBiglietto.innerHTML = finalPrice;
+    costoBiglietto.innerHTML = finalPrice + " €";
 
   }
 );
@@ -82,4 +82,13 @@ pulsanteAnnulla.addEventListener("click",
    document.getElementById("codice").value = "";
    document.getElementById("costo").value = "";
  }
+)
+
+var pulsanteShow = document.getElementById("click_to_show");
+pulsanteShow.addEventListener("click",
+  function() {
+    var pannelloInfo = document.getElementById("info_pannel");
+    pannelloInfo.classList.remove("hidden");
+    pannelloInfo.classList.add("visible");
+  }
 )
