@@ -90,5 +90,6 @@ pulsanteShow.addEventListener("click",
     var pannelloInfo = document.getElementById("info_pannel");
     pannelloInfo.classList.remove("hidden");
     pannelloInfo.classList.add("visible");
+    pulsanteShow.classList.add("hidden");
   }
 )
