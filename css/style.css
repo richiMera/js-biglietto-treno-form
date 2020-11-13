@@ -69,12 +69,63 @@ main {
   height: calc(100vh - 90px);
   background-color: black;
 }
-
+.layover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 100%;
+}
+.promotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.circle span {
+  font-size: 60px;
+  color: green;
+}
+.main_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+}
+/* .train_btn_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.train_btn_container img {
+  width: 300px;
+} */
 #click_to_show {
   text-decoration: none;
   position: relative;
   display: inline-block;
   width: 200px;
+  height: 35px;
   line-height: 30px;
   border: 3px solid white;
   border-radius: 3px;
@@ -82,7 +133,14 @@ main {
   text-decoration: none;
   font-size: 20px;
   color: white;
+  transition: all 1.4s cubic-bezier(.49,.22,.52,1.35);
 }
+
+#click_to_show:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
 .hidden {
   opacity: 0;
   transition: 2s;
@@ -96,23 +154,14 @@ main {
   height: 100%;
   background: url(https://images.pexels.com/photos/1170184/pexels-photo-1170184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 }
-.layover {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-around;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .price_shower {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 800px;
-  height: 200px;
-  background-color: white;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 20px 20px;
 }
@@ -120,6 +169,12 @@ form {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+input,
+select {
+  height: 30px;
+  border-color: black;
+  border-radius: 4px;
 }
 
 #biglietto {
@@ -142,14 +197,6 @@ form {
 #name_box {
   background-color: #C41329;
 }
-.display_none {
-  /* opacity: 0; */
-}
-/* .price_shower
-.price_shower h2,
-.price_shower i {
-  padding-bottom: 50px;
-} */
 
 .my_btn {
   text-decoration: none;
@@ -157,14 +204,20 @@ form {
   display: inline-block;
   width: 100px;
   line-height: 30px;
-  border: 3px solid black;
+  background-color: #183153;
+  border: 3px solid #183153;
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  color: black;
+  color: white;
   margin: 0 10px;
+  transition: all 1.4s cubic-bezier(.49,.22,.52,1.35);
 }
+.my_btn:hover {
+  opacity: 0.8;
+}
+
 
 /* .price_shower a {
   text-decoration: none;
