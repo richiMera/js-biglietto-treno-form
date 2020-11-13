@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <div class="header_left">
+        <img src="https://www.trenitalia.com/content/dam/tcom/asset/icon/header-logo/logo-trenitalia.svg" alt="">
+      </div>
+
+      <div class="header_mid">
+        <ul class="header_list">
+          <li>
+            <a href="#">Le Freccie
+              <div class="pink_line"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">Altri Treni
+              <div class="pink_line"></div>
+            </a>
+          </li>
+          <li
+          ><a href="#">Regionale
+            <div class="pink_line"></div>
+          </a>
+        </li>
+        </ul>
+      </div>
+
+      <div class="header_right">
+        <ul class="header_list">
+          <li><a href="#">Home</a></li>
+          <li><a class="btn" href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </header>
+    <main>
+      <div class="hero_container">
+        <div class="layover">
+          <div class="price_shower">
+            <form>
+              <input id="nome_cognome" type="text" name="NoneCognome" value="nomeCognome">
+
+
+              <input id="kilometri" type="text" name="km" value="km">
+
+
+              <select id="eta" class="" name="scelta">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over65">Over65</option>
+              </select>
+            </form>
+
+            <div class="btn_container">
+              <a id="genera" class="my_btn" href="#">Genera</a>
+              <a id="annulla" class="my_btn" href="#">Annulla</a>
+            </div>
+          </div>
+          <div id="biglietto" class="price_shower">
+
+            <div class="buyer_ticket">
+              <h2>Nome del passeggero</h2>
+              <span id="nomePasseggero"></span>
+            </div>
+
+            <div class="buyer_ticket">
+              <h4>Offerta</h4>
+              <span id="nomePasseggero"></span>
+            </div>
+
+            <div class="buyer_ticket">
+              <h4>Carrozza</h4>
+              <span id="nomePasseggero"></span>
+            </div>
+
+            <div class="buyer_ticket">
+              <h4>Codice CP</h4>
+              <span id="nomePasseggero"></span>
+            </div>
+
+            <div class="buyer_ticket">
+              <h4>Costo Biglietto</h4>
+              <span id="nomePasseggero"></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>

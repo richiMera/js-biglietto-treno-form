@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  padding: 0 60px;
+}
+
+/* .header_left {
+  width: 20%;
+}
+.header_mid {
+  text-align: center;
+  width: 50%;
+}
+.header_right {
+  text-align: right;
+  width: 30%;
+} */
+.header_list {
+  list-style: none;
+}
+.header_list li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.header_list a {
+  text-decoration: none;
+  color: black;
+}
+.pink_line {
+  width: 0px;
+  height: 3px;
+  background-color: pink;
+  transition: 0.2s linear;
+}
+a:hover .pink_line {
+  width: 60px;
+}
+
+.header_left img {
+  width: 200px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  border: 1px solid black;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: black;
+}
+
+.hero_container {
+  width: 100%;
+  height: 100%;
+  background: url(https://images.pexels.com/photos/1170184/pexels-photo-1170184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+}
+.layover {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.price_shower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 20px;
+}
+form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#biglietto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.buyer_ticket {
+  height: 100%;
+}
+/* .price_shower
+.price_shower h2,
+.price_shower i {
+  padding-bottom: 50px;
+} */
+
+.my_btn {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+  border: 3px solid black;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  margin: 0 10px;
+}
+
+/* .price_shower a {
+  text-decoration: none;
+}
+.price_shower i {
+  display: block;
+  font-size: 20px;
+  color: black;
+  transition: 0.4s;
+}
+.price_shower i:hover {
+  transform: scaleY(1.5);
+} */
+
+
+/* .btn_shower {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  line-height: 60px;
+  border: 3px solid black;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+.btn_shower span {
+  font-size: 20px;
+} */
+
+.top_btn {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 40px;
+  height: 15px;
+  background-color: white;
+}
+.bottom_btn {
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+  width: 40px;
+  height: 15px;
+  background-color: white;
+}
+
+.btn_shower:hover .top_btn {
+  animation: spin-top 3s linear;
+}
+@keyframes spin-top {
+  0% {
+    left: 10%;
+    top: -10%;
+  }
+  30% {
+    left: calc(100% - 30px);
+    top: -10%;
+  }
+  45% {
+    left: calc(100% - 30px);
+    top: 100%;
+  }
+  75% {
+    left: 0;
+    top: 100%;
+  }
+  90% {
+    left: -15px;
+    top: -10%;
+  }
+  100% {
+    left: 10%;
+    top: -10%;
+  }
+}
+
+.btn_shower:hover .bottom_btn {
+  animation: bottom-spin 3s linear;
+}
+@keyframes bottom-spin {
+  0% {
+    right: 10%;
+    bottom: -10px;
+  }
+  30% {
+    right: calc(100% - 30px);
+    bottom: -10%;
+  }
+  45% {
+    right: calc(100% - 30px);
+    bottom: 100%;
+  }
+  75% {
+    right: 0%;
+    bottom: 100%;
+  }
+  90% {
+    right: -15%;
+    bottom: -10%;
+  }
+  100% {
+    right: 10%;
+    bottom: -10px;
+  }
+}
