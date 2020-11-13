@@ -85,7 +85,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 600px;
+  width: 800px;
   height: 200px;
   background-color: white;
   border-radius: 5px;
@@ -102,11 +102,23 @@ form {
   flex-direction: row;
   justify-content: space-between;
 }
-.buyer_ticket {
+.ticket_wrap {
+  display: flex;
+  width: 100%;
   height: 100%;
+  border: 1px solid black;
+}
+.buyer_ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: calc(100% / 5);
+}
+#name_box {
+  background-color: #C41329;
 }
 .display_none {
-  opacity: 0;
+  /* opacity: 0; */
 }
 /* .price_shower
 .price_shower h2,
