@@ -17,5 +17,36 @@ function() {
 
  var etaUtente = document.getElementById("eta").value;
  console.log(etaUtente);
+
+  var basePrice = 0.21;
+  // console.log(basePrice);
+  var ticketPrice = kmUtente * basePrice;
+  // console.log(ticketPrice);
+  // va applicato uno sconto del 20% per i minorenni;
+  // var minorAge = 18;
+  // var overAge = 65;
+  var minorsDiscount = (ticketPrice * 20) / 100;
+  // console.log(minorsDiscount);
+  // va applicato uno sconto del 40% per gli over 65.
+  var overDiscount = (ticketPrice * 40) /100;
+
+  var minorFinalPrice = ticketPrice - minorsDiscount;
+
+  var overFinalPrice = ticketPrice - overDiscount;
+
+  var accuracyMinor = minorFinalPrice.toFixed(2);
+  var accuracyOver = overFinalPrice.toFixed(2);
+  var accuracyNormal = ticketPrice.toFixed(2);
+
+  if (etaUtente == "minorenne") {
+      accuracyMinor;
+      console.log(accuracyMinor);
+      } else if (etaUtente == "over65") {
+        accuracyOver;
+        console.log(accuracyOver);
+      } else {
+        accuracyNormal;
+        console.log(accuracyNormal);
+  }
   }
 )
