@@ -37,19 +37,38 @@ function() {
   var accuracyOver = overFinalPrice.toFixed(2);
   var accuracyNormal = ticketPrice.toFixed(2);
 
+  var message = "";
   if (etaUtente == "minorenne") {
+      message = "Sconto minorenne"
       accuracyMinor;
       console.log(accuracyMinor);
     } else if (etaUtente == "over65") {
+        message = "Sconto Silver"
         accuracyOver;
         console.log(accuracyOver);
     } else {
+      message = "Biglietto Standard"
         accuracyNormal;
         console.log(accuracyNormal);
     }
 
     var ticket = document.getElementById("biglietto");
     ticket.style.opacity = 1;
+
+    var nomePasseggero = document.getElementById("nomePasseggero");
+    nomePasseggero.innerHTML = nome;
+
+    var offerta = document.getElementById("offerta");
+    offerta.innerHTML = message;
+
+    var carrozza =  document.getElementById("carrozza");
+    carrozza.innerHTML = Math.floor(Math.random() * 11)
+
+    var codiceCp = document.getElementById("codice");
+    codiceCp.innerHTML = Math.floor(Math.random() * 10000) + 9000;
+
+    var costoBiglietto = document.getElementById("costo");
+    costoBiglietto.innerHTML = etaUtente;
 
   }
 )
