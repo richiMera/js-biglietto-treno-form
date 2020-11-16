@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -9,129 +10,150 @@
     <title></title>
   </head>
   <body>
-    <!-- heder da migliorare -->
+    <!-- header -->
     <header>
-      <div class="header_left">
-        <img src="https://www.trenitalia.com/content/dam/tcom/asset/icon/header-logo/logo-trenitalia.svg" alt="">
+      <!-- logo-box -->
+      <div class="logo_box">
+        <h1><span>MERA</span> Reilways</h1>
       </div>
 
-      <div class="header_mid">
-        <ul class="header_list">
-          <li>
-            <a href="#">Le Freccie
-              <div class="pink_line"></div>
-            </a>
-          </li>
-          <li>
-            <a href="#">Altri Treni
-              <div class="pink_line"></div>
-            </a>
-          </li>
-          <li
-          ><a href="#">Regionale
-            <div class="pink_line"></div>
-          </a>
-        </li>
-        </ul>
-      </div>
-
-      <div class="header_right">
-        <ul class="header_list">
+      <!-- active-box -->
+      <div class="active_box">
+        <ul class="inline_list">
           <li><a href="#">Home</a></li>
-          <li><a class="btn" href="#">Contact Us</a></li>
+          <li><a href="#">Offerte</a></li>
+          <li><a href="#">Campagna</a></li>
+          <li><a href="#">Biglietto</a></li>
         </ul>
+
+        <div class="active_line"></div>
       </div>
 
+      <div class="info_box">
+        <ul class="inline_list">
+          <li><a href="">Chi Siamo</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </div>
     </header>
-    <!-- /heder da migliorare -->
 
-
+    <!-- main ---->
     <main>
-      <div class="hero_container">
-        <div class="layover">
+      <div id="thanks_container" class="hidden">
+        <div class="thanks_layover">
+          <p id="turn_back"> <i class="fas fa-arrow-left"></i> Torna indietro</p>
+          <h2 id="thanks_text" class="hidden">Acquisto effettuato con successo. Mera Reilways vi augura un buon viaggio.</h2>
+        </div>
+      </div>
 
-          <div class="main_left">
-            <div class="promotion">
-              <div class="circle">
-                <h2><span>20%</span> <br> di SCONTO <br> per i Minorenni </h2>
-              </div>
-            </div>
+      <div id="left_box_js" class="main_left_box">
 
-            <div class="promotion">
-              <div class="circle">
-                  <h2><span>40%</span> <br> di SCONTO <br> per gli over 65 </h2>
-              </div>
-            </div>
+        <div class="discount_info_box">
 
+          <div class="discount_slogan_box p_b_10">
+            <h1>A better way to travel.</h1>
           </div>
 
-          <div class="main_right">
+          <div class="value_box p_b_20">
+            <p>Scopri con Mera Reilways le offerte dedicate a te, e fatti accompagnare dai nostri treni in totale confort e comodità.
+            La bellezza non sta nella destinazione ma nel viaggio. </p>
+          </div>
 
-            <div class="train_btn_container">
+          <div class="discount_20_box p_b_10">
+            <p><i class="fas fa-check"></i> 20% di sconto per i nostri viaggiatori minorenni.</p>
+          </div>
 
-              <a id="click_to_show" href="#">Il tuo Viaggio</a>
+          <div class="discount_40_box p_b_30">
+            <p><i class="fas fa-check"></i> 40% di sconto per i nostri viaggiatori over-65.</p>
+          </div>
 
-            </div>
-
-            <div id="info_pannel" class="price_shower hidden">
-              <form>
-                <input id="nome_cognome" type="name" name="name" placeholder="Nome e Cognome">
-
-
-                <input id="kilometri" type="number" name="km" placeholder="numero kilometri">
-
-
-                <select id="eta" class="" name="scelta">
-                  <option value="minorenne">Minorenne</option>
-                  <option value="maggiorenne">Maggiorenne</option>
-                  <option value="over65">Over65</option>
-                </select>
-              </form>
-
-              <div class="btn_container">
-                <a id="genera" class="my_btn" href="#">Genera</a>
-                <a id="annulla" class="my_btn" href="#">Annulla</a>
-              </div>
-            </div>
-
-            <div id="biglietto" class="price_shower hidden">
-
-              <div class="ticket_wrap">
-
-                <div id="name_box" class="buyer_ticket">
-                  <h2>Nome del passeggero</h2>
-                  <span id="nomePasseggero"></span>
-                </div>
-
-                <div class="buyer_ticket">
-                  <h4>Offerta</h4>
-                  <span id="offerta"></span>
-                </div>
-
-                <div class="buyer_ticket">
-                  <h4>Carrozza</h4>
-                  <span id="carrozza"></span>
-                </div>
-
-                <div class="buyer_ticket">
-                  <h4>Codice CP</h4>
-                  <span id="codice"></span>
-                </div>
-
-                <div class="buyer_ticket">
-                  <h4>Costo Biglietto</h4>
-                  <span id="costo"></span>
-                </div>
-
-              </div>
-
-            </div>
-
+          <div class="ticket_btn_box">
+            <a id="click_to_show" class="ticket_btn" href="#">Il tuo biglietto</a>
           </div>
 
         </div>
       </div>
+
+      <div id="right_box_js" class="main_right_box">
+        <div id="info_pannel" class="hidden">
+          <div class="info_pannel_h2">
+            <h2>Genera il tuo biglietto</h2>
+          </div>
+
+          <form class="info_form">
+
+            <div class="form_box">
+              <input id="nome_cognome" type="name" name="name" placeholder="Nome e Cognome">
+            </div>
+
+            <div class="form_box">
+              <input id="kilometri" type="number" name="km" placeholder="Numero kilometri">
+            </div>
+
+            <div class="form_box">
+              <select id="eta" class="" name="scelta">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over65">Over65</option>
+              </select>
+            </div>
+
+          </form>
+
+          <div class="btn_container">
+            <a id="genera" class="my_btn" href="#">Genera</a>
+          </div>
+        </div>
+
+
+        <div class="absolute_ticket_box">
+
+          <div id="biglietto" class="hidden">
+
+            <div class="ticket_wrap">
+
+              <div id="name_box" class="">
+                <h4>Nome del passeggero</h2>
+                <span id="nomePasseggero"></span>
+              </div>
+
+              <div class="buyer_ticket">
+                <h4>Offerta</h4>
+                <span id="offerta"></span>
+              </div>
+
+              <div class="buyer_ticket border">
+                <h4>Carrozza</h4>
+                <span id="carrozza"></span>
+              </div>
+
+              <div class="buyer_ticket border">
+                <h4>Codice CP</h4>
+                <span id="codice"></span>
+              </div>
+
+              <div class="buyer_ticket">
+                <h4>Costo Biglietto</h4>
+                <span id="costo"></span>
+              </div>
+
+            </div>
+
+            <div id="btn_final_container" class="btn_container">
+              <a id="acquista" class="my_btn hidden"href="#">Acquista</a>
+              <a id="annulla" class="my_btn hidden" href="#">Annulla</a>
+            </div>
+        </div>
+
+        </div>
+
+
+
+      <!-- <div class="main_right_box hidden">
+
+        </div> -->
+      </div>
     </main>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
-  </html>
+</html>
